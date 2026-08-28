@@ -54,6 +54,7 @@ jobs:
             python -m pip install --upgrade pip
             python -m pip install nbconvert
             python -m jupyter nbconvert --to html project.ipynb --output index.html --output-dir site
+            python -c "import re,pathlib; p=pathlib.Path('site/index.html'); p.write_text(re.sub(r'<title>.*?</title>', '<title>Diabetes Prediction using Stacking</title>', p.read_text(encoding='utf-8'), count=1, flags=re.S), encoding='utf-8')"
           elif [[ -f README.md ]]; then
             python -m pip install --upgrade pip
             python -m pip install markdown
