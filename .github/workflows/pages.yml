@@ -113,10 +113,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # Turns Pages on for the repo if it is not already, so the first run
-          # of this workflow does not fail with "Get Pages site failed".
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
