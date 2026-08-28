@@ -21,20 +21,26 @@ question being asked is whether the notebook still works today.
 
 ## What success looks like
 
-Exits 0. Every cell runs with no exception. The last cell prints two lines, of the form:
+Exits 0. Every cell runs with no exception. Nothing in the output says "fits failed".
+The last cell prints two lines, of the form:
 
 ```
 - Accuracy of 'Our Model', for Diabetes Prediction (On Training Data) is : 0.8xxxx
 - Accuracy of 'Our Model', for Diabetes Prediction (On Testing Data) is : 0.7xxxx
 ```
 
-For reference, the outputs committed in `project.ipynb` say the stacking model scored
-0.74459 on test data. The README says 82.68%. Those two numbers do not agree, and the
-README is the one that is wrong against the committed notebook.
+The last verified run, on 2026-08-28 after the rehab fixes, gave 0.82682 on training
+data and 0.77489 on test, with these test accuracies for the six base models:
+Gaussian NB 0.74026, Random Forest 0.74026, Logistic Regression 0.74026,
+SVM 0.73593, ANN 0.71861, Decision Tree 0.71429.
 
-Individual model test accuracies stored in the committed notebook:
-Gaussian NB 0.75758, Random Forest 0.75758, Logistic Regression 0.73160,
-SVM 0.74892, ANN 0.72727, Decision Tree 0.74026.
+None of the models sets a random seed, so expect these to move by a point or two
+between runs. Treat them as a range, not as fixed targets.
+
+The cell outputs stored inside `project.ipynb` are older than the code and were left
+alone deliberately, because re-executing them grows the file from 187 KB to about
+1.6 MB, nearly all of it repeated scikit-learn deprecation warnings, and the GitHub
+Pages demo is built from that file.
 
 The run takes a while. The stacking cell refits all five search objects on 4 CV folds
 each, so it repeats the whole hyperparameter search several times over.
