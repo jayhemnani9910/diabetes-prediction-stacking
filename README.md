@@ -14,9 +14,9 @@
 
 - We have used a "Random Forest" Model (from python's 'scikit' module) as the level-1 model, with 4-fold CV.
 
-- On a fresh run of the notebook, "Our Model" reaches 77.49% test accuracy, which is higher than every one of the 6 individual models: Naive Bayes 74.03%, Random Forest 74.03%, Logistic Regression 74.03%, SVM 73.59%, ANN 71.86%, Decision Tree 71.43%.
+- How well does the stacking model do? The honest answer is that it moves a lot. Two runs of identical code gave 77.49% and 72.29% test accuracy. On the first it beat all 6 individual models. On the second, 4 of the 6 beat it.
 
-- The base models are built without a fixed random seed, so these figures move by a point or two from run to run. The cell outputs saved inside `project.ipynb` come from an older run on an older scikit-learn and no longer match the current code. Run the notebook yourself to regenerate them. `REHAB.md` has the command.
+- That spread comes from the models setting no random seed, so every execution gives a different answer. Read any single number in this notebook as one sample rather than a result. The saved cell outputs are from one run, and they are what the demo page shows. `REHAB.md` has the command to run it yourself.
 
 ## Contributors & Authors
 
