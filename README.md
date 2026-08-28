@@ -14,9 +14,13 @@
 
 - We have used a "Random Forest" Model (from python's 'scikit' module) as the level-1 model, with 4-fold CV.
 
-- How well does the stacking model do? The honest answer is that it moves a lot. Two runs of identical code gave 77.49% and 72.29% test accuracy. On the first it beat all 6 individual models. On the second, 4 of the 6 beat it.
+- Every model now sets `random_state = 42`, so the notebook gives the same answer every time. This was checked by running it twice and comparing all 19 reported numbers.
 
-- That spread comes from the models setting no random seed, so every execution gives a different answer. Read any single number in this notebook as one sample rather than a result. The saved cell outputs are from one run, and they are what the demo page shows. `REHAB.md` has the command to run it yourself.
+- Test accuracy on that run: Decision Tree 75.76%, Gaussian NB 74.03%, Random Forest 74.03%, Logistic Regression 74.03%, SVM 73.59%, "Our Model" 73.59%, ANN 66.67%.
+
+- So stacking did not beat the 6 individual models here. It ties the SVM and comes below four of them. Earlier, before the seeds were fixed, "Our Model" ranged from 72% to 77% across runs and its position in that list moved with it.
+
+- Worth knowing why the ranking is not worth much either way. The test set is 231 rows, so one percentage point is about 2 patients. Most of these models sit inside a couple of points of each other, which is noise at this size. This dataset and this setup are not enough to declare a winner, and the interesting part of the project is the stacking construction rather than the score.
 
 ## Contributors & Authors
 
