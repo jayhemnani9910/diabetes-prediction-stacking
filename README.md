@@ -14,7 +14,9 @@
 
 - We have used a "Random Forest" Model (from python's 'scikit' module) as the level-1 model, with 4-fold CV.
 
-- We have achieved 82.68% test accuracy on "Our Model", which is better than all the 6 individual models.
+- On a fresh run of the notebook, "Our Model" reaches 77.49% test accuracy, which is higher than every one of the 6 individual models: Naive Bayes 74.03%, Random Forest 74.03%, Logistic Regression 74.03%, SVM 73.59%, ANN 71.86%, Decision Tree 71.43%.
+
+- The base models are built without a fixed random seed, so these figures move by a point or two from run to run. The cell outputs saved inside `project.ipynb` come from an older run on an older scikit-learn and no longer match the current code. Run the notebook yourself to regenerate them. `REHAB.md` has the command.
 
 ## Contributors & Authors
 
