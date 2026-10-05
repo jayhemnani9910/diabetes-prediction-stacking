@@ -29,18 +29,9 @@ The last cell prints two lines, of the form:
 - Accuracy of 'Our Model', for Diabetes Prediction (On Testing Data) is : 0.7xxxx
 ```
 
-The last verified run, on 2026-08-28 after the rehab fixes, gave 0.82682 on training
-data and 0.77489 on test, with these test accuracies for the six base models:
-Gaussian NB 0.74026, Random Forest 0.74026, Logistic Regression 0.74026,
-SVM 0.73593, ANN 0.71861, Decision Tree 0.71429.
+Every model is seeded, so two runs give the same numbers. The current numbers live in README.md.
 
-None of the models sets a random seed, so expect these to move by a point or two
-between runs. Treat them as a range, not as fixed targets.
-
-The cell outputs stored inside `project.ipynb` are older than the code and were left
-alone deliberately, because re-executing them grows the file from 187 KB to about
-1.6 MB, nearly all of it repeated scikit-learn deprecation warnings, and the GitHub
-Pages demo is built from that file.
+The stored cell outputs are the GitHub Pages demo, so re-run and commit them whenever a code cell changes.
 
 The run takes a while. The stacking cell refits all five search objects on 4 CV folds
 each, so it repeats the whole hyperparameter search several times over.
