@@ -38,7 +38,11 @@ each, so it repeats the whole hyperparameter search several times over.
 
 ## Test command
 
-None. This repo has no test suite, no linter config, and no CI beyond the Pages deploy.
+```
+python tests/check_results.py out/project.ipynb
+```
+
+Run it on the executed copy. It checks the test accuracies against the README. CI (`.github/workflows/ci.yml`) runs ruff, the notebook and this check on every push and pull request.
 
 ## Do not run
 
