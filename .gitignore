@@ -2,3 +2,20 @@
 # /audit outputs
 graphify-out/
 .audit/
+
+# executed notebook copies
+out/
+.ipynb_checkpoints/
+__pycache__/
+
+.env*
+!.env.example
+
+# AI tool config
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursorrules
+.cursor/
+.claude/
+.github/copilot-instructions.md
