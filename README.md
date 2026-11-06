@@ -59,7 +59,7 @@ Every model sets `random_state = 42`, so the notebook gives the same answer ever
 
 ## Dataset
 
-`diabetes.csv` is the Pima Indians Diabetes Database: 768 patients, all women of Pima Indian heritage aged 21 or older, with 8 measurements each and whether they showed signs of diabetes. The original owner is the National Institute of Diabetes and Digestive and Kidney Diseases. Vincent Sigillito (Johns Hopkins APL) donated it to the UCI Machine Learning Repository in 1990. UCI has since taken it down; [OpenML](https://www.openml.org/d/37) still hosts it with the original notes. The notebook's feature definitions come from a Kaggle copy. It was first described in:
+`diabetes.csv` is the Pima Indians Diabetes Database: 768 patients, all women of Pima Indian heritage aged 21 or older, with 8 measurements each and whether they showed signs of diabetes. The original owner is the National Institute of Diabetes and Digestive and Kidney Diseases. Vincent Sigillito (Johns Hopkins APL) donated it to the UCI Machine Learning Repository in 1990. UCI has since taken it down; [OpenML](https://www.openml.org/d/37) still hosts it with the original notes. The notebook's feature definitions come from a Kaggle copy. The MIT license does not cover the dataset. It was first described in:
 
 > Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., and Johannes, R.S. (1988). Using the ADAP learning algorithm to forecast the onset of diabetes mellitus. *Proceedings of the Annual Symposium on Computer Application in Medical Care*, 261-265.
 
